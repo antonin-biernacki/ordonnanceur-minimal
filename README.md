@@ -15,6 +15,7 @@ Plusieurs tâches s'exécutent « en parallèle » sur un seul cœur : un timer 
 - [Utilisation](#utilisation)
 - [Fonctionnement interne](#fonctionnement-interne)
 - [Limites](#limites)
+- [Crédits](#crédits)
 
 ## Contexte
 
@@ -135,3 +136,7 @@ Chaque caractère reçu est interprété comme une commande, puis renvoyé en é
 - Les délais `_delay_ms` des tâches sont ralentis par les changements de contexte : le clignotement réel est plus lent que le délai demandé, d'autant plus qu'il y a de tâches actives
 - La tâche série attend les caractères en boucle : un caractère reçu pendant qu'elle n'est pas en cours d'exécution risque d'être perdu
 - Pas de gestion de priorités
+
+## Crédits
+
+- Thomas Delobelle
