@@ -19,7 +19,7 @@ Plusieurs tâches s'exécutent « en parallèle » sur un seul cœur : un timer 
 
 ## Contexte
 
-Le shield joue le rôle de « carte mère » afin de tester l'ordonnanceur qui tourne sur ce dernier.
+Le shield, branché sur l'Arduino Uno, joue le rôle de « carte mère » : il sert à tester l'ordonnanceur, qui tourne sur l'ATmega328P de l'Arduino.
 
 Le shield et l'ordonnanceur sont terminés et testés : LEDs, lecteur de carte SD, communication série et SPI.
 
@@ -100,7 +100,7 @@ make flash PORT=/dev/ttyUSB0
 
 ## Utilisation
 
-Au démarrage, seule la tâche d'interface série est active. Ouvre un terminal série sur la carte (par exemple avec `minicom` ou `screen`) avec les paramètres **9600 bauds, 8 bits de données, pas de parité, 2 bits de stop** :
+Au démarrage, seule la tâche d'interface série est active. Ouvrez un terminal série sur la carte (par exemple avec `minicom` ou `screen`) avec les paramètres **9600 bauds, 8 bits de données, pas de parité, 2 bits de stop** :
 
 ```bash
 minicom -D /dev/ttyACM0 -b 9600
